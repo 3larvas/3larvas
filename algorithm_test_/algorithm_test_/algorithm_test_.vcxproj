@@ -148,6 +148,7 @@
     <ClCompile Include="algo_13458_시험감독.cpp" />
     <ClCompile Include="algo_13460_구슬탈출2.cpp" />
     <ClCompile Include="algo_14499_주사위굴리기.cpp" />
+    <ClCompile Include="algo_14500_테트로미노.cpp" />
     <ClCompile Include="algo_14501_퇴사.cpp" />
     <ClCompile Include="algo_1463_1로만들기.cpp" />
     <ClCompile Include="algo_1600_말이되고싶은_원숭이.cpp" />
