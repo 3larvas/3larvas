@@ -30,6 +30,7 @@
     <ClCompile Include="algo_9465_스티커.cpp" />
     <ClCompile Include="test_main.cpp" />
     <ClCompile Include="algo_14502_연구소.cpp" />
+    <ClCompile Include="algo_14503_로봇청소기.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Text.txt" />
