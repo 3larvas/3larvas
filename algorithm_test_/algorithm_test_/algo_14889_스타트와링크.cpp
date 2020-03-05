@@ -1,30 +1,47 @@
 // √‚√≥ : https://www.acmicpc.net/problem/14889
 #include <iostream>
+#include <vector>
 using namespace std;
 int n;
 int m[20][20];
-int m_sub[10];
+int result = 100000;
 int result_a, result_b;
-void DFS(int cnt, int val) {
-	m_sub[cnt] = val;
-	if (cnt < n / 2 - 1) {
-		for (int i = val + 1; i < n; i++) {
-			DFS(cnt + 1, i);
-		}
-	}
-	else {
-		for (int i = 0; i < n; i++) {
-			
-		}
-		for (int i = 0; i < n / 2; i++) {
-			for (int j = 0; j < n / 2; j++) {
+vector<int> start, link;
+
+int min(int a, int b) {
+	return a < b ? a : b;
+}
+void DFS(int i) {
+	if (start.size() == n / 2 && link.size() == n / 2) {
+		for (int i = 0; i < start.size(); i++) cout << start.at(i);
+		cout << ", ";
+		for (int i = 0; i < link.size(); i++) cout << link.at(i);
+		cout << "\n";
+		for (int i = 0; i < start.size(); i++) {
+			for (int j = 0; j < start.size(); j++) {
 				if (j != i) {
-					cout << m[m_sub[i]][m_sub[j]]<< ", ";
-					result_a += m[m_sub[i]][m_sub[j]];
+					result_a += m[start.at(i)][start.at(j)];
 				}
 			}
 		}
-		cout << "###\n";
+		for (int i = 0; i < link.size(); i++) {
+			for (int j = 0; j < link.size(); j++) {
+				if (j != i) {
+					result_b += m[link.at(i)][link.at(j)];
+				}
+			}
+		}
+		result = min(result, abs(result_a - result_b));
+	}
+	if (start.size() < n / 2) {
+		start.push_back(i);
+		DFS(i + 1);
+		start.pop_back();
+	}
+	if (link.size() < n / 2) {
+		link.push_back(i);
+		DFS(i + 1);
+		link.pop_back();
 	}
 }
 
@@ -34,6 +51,7 @@ int main() {
 	cout.tie(NULL);
 	cin >> n;
 	for (int i = 0; i < n*n; i++) cin >> m[i / n][i % n];
-	DFS(0, 0);
+	DFS(0);
+	cout << "####" << result;
 	return 0;
 }
