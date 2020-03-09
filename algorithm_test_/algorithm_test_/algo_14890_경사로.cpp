@@ -3,74 +3,104 @@
 #include <cstdio>
 
 int n, l;
-int map[101][101];
-int gap_map[101][101];
-int vis_map[101][101];
+short map[101][101];
+int result;
 
 int main() {
 	scanf("%d %d", &n, &l);
 	for (int i = 0; i < n * n; i++) scanf("%d", &map[i / n][i % n]);
-	/*for (int i = 0; i < n; i++) {
-		for (int j = 0; j < n-1; j++) {
-			gap_map[i][j] = map[i][j] - map[i][j + 1 ];
-		}
-	}
 
 	for (int i = 0; i < n; i++) {
+		bool vis_col_map[101] = { 0, };
+		int tmp_result = 0;
 		for (int j = 0; j < n - 1; j++) {
-			printf("%d ",gap_map[i][j]);
-		}
-		printf("\n");
-	}*/
-
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < n-1; j++) {
 			int gap_col = map[i][j] - map[i][j + 1];
-			if (gap_col == 0) {
-				
-			}
+			if (gap_col == 0) {}
 			else if (gap_col == -1) {
 				int cnt = 0;
-				while (cnt != l && j - cnt >= 0) {
-					if (map[i][j - cnt] == map[i][j]) {
-						if (vis_map[i][j - cnt] == 0) {
-							cnt++;
-						}
+				while (cnt != l) {
+					if (j - cnt < 0) goto EXIT_COL;
+					if (map[i][j - cnt] == map[i][j] && vis_col_map[j - cnt] == 0) {
+						cnt++;
 					}
-					else break;
+					else goto EXIT_COL;
 				}
 				if (cnt == l) {
 					while (cnt > 0) {
 						cnt--;
-						vis_map[i][j - cnt] = 1;
+						vis_col_map[j - cnt] = 1;
 					}
 				}
-				if (j - cnt <= 0) break;
-				if (map[i][j - cnt] != map[i][j]) break;
 			}
 			else if (gap_col == 1) {
-				int cnt = 1;
-				while (cnt != l && j + cnt + 1 <= n) {
-					if (map[i][j + cnt + 1] == map[i][j+1]) {
-						if (vis_map[i][j + cnt + 1] == 0) {
-							cnt++;
-						}
+				int cnt = 0;
+				while (cnt != l) {
+					if (j + cnt > n) goto EXIT_COL;
+					if (map[i][j + cnt + 1] == map[i][j + 1] && vis_col_map[j + cnt + 1] == 0) {
+						cnt++;
 					}
-					else break;
+					else goto EXIT_COL;
 				}
 				if (cnt == l) {
 					while (cnt > 0) {
 						cnt--;
-						vis_map[i][j + cnt] = 1;
+						vis_col_map[j + cnt + 1] = 1;
 					}
 				}
-				if (j + cnt >= n) break;
-				if (map[i][j + cnt + 1] != map[i][j + 1]) break;
 			}
 			else break;
-			printf(" 5 ");
+			tmp_result++;
 		}
-		printf("\n");
+	EXIT_COL:;
+		if (tmp_result == n - 1) result++;
 	}
+	for (int i = 0; i < n; i++) {
+		bool vis_row_map[101] = { 0, };
+		int tmp_result = 0;
+		for (int j = 0; j < n - 1; j++) {
+			int gap_row = map[j][i] - map[j + 1][i];
+			if (gap_row == 0) {}
+			else if (gap_row == -1) {
+				int cnt = 0;
+				while (cnt != l) {
+					if (j - cnt < 0)  goto EXIT_ROW;
+					if (map[j - cnt][i] == map[j][i] && vis_row_map[j - cnt] == 0) {
+						cnt++;
+					}
+					else goto EXIT_ROW;
+				}
+
+				if (cnt == l) {
+					while (cnt > 0) {
+						cnt--;
+						vis_row_map[j - cnt] = 1;
+					}
+				}
+			}
+			else if (gap_row == 1) {
+				int cnt = 0;
+				while (cnt != l) {
+					if (j + cnt > n) goto EXIT_ROW;
+					if (map[j + cnt + 1][i] == map[j + 1][i] && vis_row_map[j + cnt + 1] == 0) {
+						cnt++;
+					}
+					else goto EXIT_ROW;
+				}
+
+				if (cnt == l) {
+					while (cnt > 0) {
+						cnt--;
+						vis_row_map[j + cnt + 1] = 1;
+					}
+				}
+			}
+			else break;
+			tmp_result++;
+		}
+	EXIT_ROW:;
+		if (tmp_result == n - 1) result++;
+	}
+
+	printf("%d", result);
 	return 0;
 }
