@@ -33,6 +33,7 @@
     <ClCompile Include="algo_14503_로봇청소기.cpp" />
     <ClCompile Include="algo_14888_연산자끼워넣기.cpp" />
     <ClCompile Include="algo_14889_스타트와링크.cpp" />
+    <ClCompile Include="algo_14890_경사로.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Text.txt" />
