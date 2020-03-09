@@ -31,7 +31,7 @@ int main() {
 			}
 			else if (gap_col == -1) {
 				int cnt = 0;
-				while (cnt != l && j - cnt > 0) {
+				while (cnt != l && j - cnt >= 0) {
 					if (map[i][j - cnt] == map[i][j]) {
 						if (vis_map[i][j - cnt] == 0) {
 							cnt++;
@@ -45,11 +45,12 @@ int main() {
 						vis_map[i][j - cnt] = 1;
 					}
 				}
-				if (j - cnt < 0) break;
+				if (j - cnt <= 0) break;
+				if (map[i][j - cnt] != map[i][j]) break;
 			}
 			else if (gap_col == 1) {
 				int cnt = 1;
-				while (cnt != l && j + cnt + 2 < n) {
+				while (cnt != l && j + cnt + 1 <= n) {
 					if (map[i][j + cnt + 1] == map[i][j+1]) {
 						if (vis_map[i][j + cnt + 1] == 0) {
 							cnt++;
@@ -63,9 +64,11 @@ int main() {
 						vis_map[i][j + cnt] = 1;
 					}
 				}
-				if (j + cnt > n) break;
+				if (j + cnt >= n) break;
+				if (map[i][j + cnt + 1] != map[i][j + 1]) break;
 			}
 			else break;
+			printf(" 5 ");
 		}
 		printf("\n");
 	}
