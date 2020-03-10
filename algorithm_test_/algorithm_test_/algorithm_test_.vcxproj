@@ -155,6 +155,8 @@
     <ClCompile Include="algo_14888_연산자끼워넣기.cpp" />
     <ClCompile Include="algo_14889_스타트와링크.cpp" />
     <ClCompile Include="algo_14890_경사로.cpp" />
+    <ClCompile Include="algo_14891_톱니바퀴.cpp" />
+    <ClCompile Include="algo_15683_감시.cpp" />
     <ClCompile Include="algo_1600_말이되고싶은_원숭이.cpp" />
     <ClCompile Include="algo_1697_숨바꼭질.cpp" />
     <ClCompile Include="algo_1759_암호만들기.cpp" />
