@@ -5,14 +5,32 @@
 using namespace std;
 int n, m;
 int map[9][9];
-int d_four_row[4] = { 0, 0, 1, -1 };
-int d_four_col[4] = { 1, -1, 0, 0 };
+int d_one_row[4] = { 0, 0, 1, -1 };
+int d_one_col[4] = { 1, -1, 0, 0 };
+int d_two[4][2] = { {0, 1},
+					{1, 0},
+					{0, -1},
+					{-1, 0}, };
+int d_three[4][4] = { {0, 0, 0, 0},
+					  {1, 1, -1, -1},
+					  {-1, 1, -1, 1},
+					  {0, 0, 0, 0}, };
+
+int d_four[6][4] = { {0, 0, 0, 1},
+					  {1, 1, 1, 0},
+					  {-1, 1, 1, 0},
+					  {0, 0, 0, -1},
+					  {0, -1, 0, -1},
+					  {-1, 0, -1, 0}, };
+
+int d_five[8] = { 0,1,1,0,0,-1,-1,0 };
+
 
 vector <pair<int, pair<int, int>>> cam;
 int result=100;
 
 void DFS(int idx, int tmp[][9]) {
-	printf("***%d \n", idx);
+	//printf("***%d \n", idx);
 	int cur_cam_mode = cam.at(idx).first;
 	int cur_cam_row  = cam.at(idx).second.first;
 	int cur_cam_col  = cam.at(idx).second.second;
@@ -22,22 +40,22 @@ void DFS(int idx, int tmp[][9]) {
 	case 1:
 		for (int j = 0; j < 4; j++) {
 			copy(&tmp[0][0], &tmp[0][0] + 9 * 9, &tmp_tmp[0][0]);
-			int nxt_row = cur_cam_row + d_four_row[j];
-			int nxt_col = cur_cam_col + d_four_col[j];
+			int nxt_row = cur_cam_row + d_one_row[j];
+			int nxt_col = cur_cam_col + d_one_col[j];
 			while (nxt_row >= 0 && nxt_row < n && nxt_col >= 0 && nxt_col < m && map[nxt_row][nxt_col] != 6) {
 				tmp_tmp[nxt_row][nxt_col] = 7;
-				nxt_row = nxt_row + d_four_row[j];
-				nxt_col = nxt_col + d_four_col[j];
+				nxt_row = nxt_row + d_one_row[j];
+				nxt_col = nxt_col + d_one_col[j];
 			}
-			for (int i = 0; i < n; i++) {
+			/*for (int i = 0; i < n; i++) {
 				for (int j = 0; j < m; j++) {
 					printf("%d", tmp_tmp[i][j]);
 				}
 				printf("\n");
-			}
+			}*/
 			if (idx == cam.size()) {
 				int tmp_result = 0;
-				printf("yes \n");
+				//printf("yes \n");
 				for (int i = 0; i < n * m; i++) {
 					if (tmp_tmp[i / m][i % m] == 0)tmp_result++;
 				}
@@ -50,22 +68,64 @@ void DFS(int idx, int tmp[][9]) {
 	case 2:
 		for (int j = 0; j < 2; j++) {
 			copy(&tmp[0][0], &tmp[0][0] + 9 * 9, &tmp_tmp[0][0]);
-			int nxt_row = cur_cam_row + d_four_row[j];
-			int nxt_col = cur_cam_col + d_four_col[j];
+			int nxt_row = cur_cam_row + d_two[0][j]; 
+			int nxt_col = cur_cam_col + d_two[1][j];
 			while (nxt_row >= 0 && nxt_row < n && nxt_col >= 0 && nxt_col < m && map[nxt_row][nxt_col] != 6) {
 				tmp_tmp[nxt_row][nxt_col] = 7;
-				nxt_row = nxt_row + d_four_row[j];
-				nxt_col = nxt_col + d_four_col[j];
+				nxt_row = nxt_row + d_two[0][j];
+				nxt_col = nxt_col + d_two[1][j];
 			}
-			for (int i = 0; i < n; i++) {
+			nxt_row = cur_cam_row + d_two[2][j];
+			nxt_col = cur_cam_col + d_two[3][j];
+			while (nxt_row >= 0 && nxt_row < n && nxt_col >= 0 && nxt_col < m && map[nxt_row][nxt_col] != 6) {
+				tmp_tmp[nxt_row][nxt_col] = 7;
+				nxt_row = nxt_row + d_two[2][j];
+				nxt_col = nxt_col + d_two[3][j];
+			}
+			/*for (int i = 0; i < n; i++) {
 				for (int j = 0; j < m; j++) {
 					printf("%d", tmp_tmp[i][j]);
 				}
 				printf("\n");
-			}
+			}*/
 			if (idx == cam.size()) {
 				int tmp_result = 0;
-				printf("yes \n");
+				//printf("yes \n");
+				for (int i = 0; i < n * m; i++) {
+					if (tmp_tmp[i / m][i % m] == 0)tmp_result++;
+				}
+				if (tmp_result < result) result = tmp_result;
+				continue;
+			}
+			if (idx <= cam.size()) DFS(idx, tmp_tmp); 
+		}
+		break;
+	case 3:
+		for (int j = 0; j < 4; j++) {
+			copy(&tmp[0][0], &tmp[0][0] + 9 * 9, &tmp_tmp[0][0]);
+			int nxt_row = cur_cam_row + d_three[0][j];
+			int nxt_col = cur_cam_col + d_three[1][j];
+			while (nxt_row >= 0 && nxt_row < n && nxt_col >= 0 && nxt_col < m && map[nxt_row][nxt_col] != 6) {
+				tmp_tmp[nxt_row][nxt_col] = 7;
+				nxt_row = nxt_row + d_three[0][j];
+				nxt_col = nxt_col + d_three[1][j];
+			}
+			nxt_row = cur_cam_row + d_three[2][j];
+			nxt_col = cur_cam_col + d_three[3][j];
+			while (nxt_row >= 0 && nxt_row < n && nxt_col >= 0 && nxt_col < m && map[nxt_row][nxt_col] != 6) {
+				tmp_tmp[nxt_row][nxt_col] = 7;
+				nxt_row = nxt_row + d_three[2][j];
+				nxt_col = nxt_col + d_three[3][j];
+			}
+			/*for (int i = 0; i < n; i++) {
+				for (int j = 0; j < m; j++) {
+					printf("%d", tmp_tmp[i][j]);
+				}
+				printf("\n");
+			}*/
+			if (idx == cam.size()) {
+				int tmp_result = 0;
+				//printf("yes \n");
 				for (int i = 0; i < n * m; i++) {
 					if (tmp_tmp[i / m][i % m] == 0)tmp_result++;
 				}
@@ -75,11 +135,94 @@ void DFS(int idx, int tmp[][9]) {
 			if (idx <= cam.size()) DFS(idx, tmp_tmp);
 		}
 		break;
-	case 3:
-		break;
 	case 4:
+		for (int j = 0; j < 4; j++) {
+			copy(&tmp[0][0], &tmp[0][0] + 9 * 9, &tmp_tmp[0][0]);
+			int nxt_row = cur_cam_row + d_four[0][j];
+			int nxt_col = cur_cam_col + d_four[1][j];
+			while (nxt_row >= 0 && nxt_row < n && nxt_col >= 0 && nxt_col < m && map[nxt_row][nxt_col] != 6) {
+				tmp_tmp[nxt_row][nxt_col] = 7;
+				nxt_row = nxt_row + d_four[0][j];
+				nxt_col = nxt_col + d_four[1][j];
+			}
+			nxt_row = cur_cam_row + d_four[2][j];
+			nxt_col = cur_cam_col + d_four[3][j];
+			while (nxt_row >= 0 && nxt_row < n && nxt_col >= 0 && nxt_col < m && map[nxt_row][nxt_col] != 6) {
+				tmp_tmp[nxt_row][nxt_col] = 7;
+				nxt_row = nxt_row + d_four[2][j];
+				nxt_col = nxt_col + d_four[3][j];
+			}
+			nxt_row = cur_cam_row + d_four[4][j];
+			nxt_col = cur_cam_col + d_four[5][j];
+			while (nxt_row >= 0 && nxt_row < n && nxt_col >= 0 && nxt_col < m && map[nxt_row][nxt_col] != 6) {
+				tmp_tmp[nxt_row][nxt_col] = 7;
+				nxt_row = nxt_row + d_four[4][j];
+				nxt_col = nxt_col + d_four[5][j];
+			}
+			/*for (int i = 0; i < n; i++) {
+				for (int j = 0; j < m; j++) {
+					printf("%d", tmp_tmp[i][j]);
+				}
+				printf("\n");
+			}*/
+			if (idx == cam.size()) {
+				int tmp_result = 0;
+				//printf("yes \n");
+				for (int i = 0; i < n * m; i++) {
+					if (tmp_tmp[i / m][i % m] == 0)tmp_result++;
+				}
+				if (tmp_result < result) result = tmp_result;
+				continue;
+			}
+			if (idx <= cam.size()) DFS(idx, tmp_tmp);
+		}
 		break;
 	case 5:
+		copy(&tmp[0][0], &tmp[0][0] + 9 * 9, &tmp_tmp[0][0]);
+		int nxt_row = cur_cam_row + d_five[0];
+		int nxt_col = cur_cam_col + d_five[1];
+		while (nxt_row >= 0 && nxt_row < n && nxt_col >= 0 && nxt_col < m && map[nxt_row][nxt_col] != 6) {
+			tmp_tmp[nxt_row][nxt_col] = 7;
+			nxt_row = nxt_row + d_five[0];
+			nxt_col = nxt_col + d_five[1];
+		}
+		nxt_row = cur_cam_row + d_five[2];
+		nxt_col = cur_cam_col + d_five[3];
+		while (nxt_row >= 0 && nxt_row < n && nxt_col >= 0 && nxt_col < m && map[nxt_row][nxt_col] != 6) {
+			tmp_tmp[nxt_row][nxt_col] = 7;
+			nxt_row = nxt_row + d_five[2];
+			nxt_col = nxt_col + d_five[3];
+		}
+		nxt_row = cur_cam_row + d_five[4];
+		nxt_col = cur_cam_col + d_five[5];
+		while (nxt_row >= 0 && nxt_row < n && nxt_col >= 0 && nxt_col < m && map[nxt_row][nxt_col] != 6) {
+			tmp_tmp[nxt_row][nxt_col] = 7;
+			nxt_row = nxt_row + d_five[4];
+			nxt_col = nxt_col + d_five[5];
+		}
+		nxt_row = cur_cam_row + d_five[6];
+		nxt_col = cur_cam_col + d_five[7];
+		while (nxt_row >= 0 && nxt_row < n && nxt_col >= 0 && nxt_col < m && map[nxt_row][nxt_col] != 6) {
+			tmp_tmp[nxt_row][nxt_col] = 7;
+			nxt_row = nxt_row + d_five[6];
+			nxt_col = nxt_col + d_five[7];
+		}
+		/*for (int i = 0; i < n; i++) {
+			for (int j = 0; j < m; j++) {
+				printf("%d", tmp_tmp[i][j]);
+			}
+			printf("\n");
+		}*/
+		if (idx == cam.size()) {
+			int tmp_result = 0;
+			//printf("yes \n");
+			for (int i = 0; i < n * m; i++) {
+				if (tmp_tmp[i / m][i % m] == 0)tmp_result++;
+			}
+			if (tmp_result < result) result = tmp_result;
+			return;
+		}
+		if (idx <= cam.size()) DFS(idx, tmp_tmp);
 		break;
 	}
 }
