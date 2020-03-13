@@ -1,12 +1,10 @@
 // √‚√≥ :https://www.acmicpc.net/problem/15683
 #pragma warning (disable:4996)
-//#include <iostream>
-//#include <vector>
 #include <cstdio>
 #include <algorithm> 
 using namespace std;
 int n, m;
-int map[9][9];
+short map[9][9];
 int d_one_row[4] = { 0, 0, 1, -1 };
 int d_one_col[4] = { 1, -1, 0, 0 };
 int d_two[4][2] = { {0, 1},
@@ -25,41 +23,15 @@ int d_four[6][4] = { {0, 0, 0, 1},
 					  {-1, 0, -1, 0}, };
 int d_five[8] = { 0,1,1,0,0,-1,-1,0 };
 
-//vector <pair<int, pair<int, int>>> cam;
 int cam[8][3];
 int cam_idx, cam_size;
 int result = 100;
-void DFS(int idx, int tmp[][9]);
 
-int main() {
-	scanf("%d %d", &n, &m);
-	for (int i = 0; i < n * m; i++) {
-		scanf("%d", &map[i / m][i % m]);
-		if (map[i / m][i % m] >= 1 && map[i / m][i % m] <= 5) {
-			cam[cam_idx][0] = map[i / m][i % m];
-			cam[cam_idx][1] = i / m;
-			cam[cam_idx][2] = i % m;
-			cam_idx++;
-		}		
-	}
-	cam_size = cam_idx;
-	int tmp_map[9][9] = { 0, };
-	copy(&map[0][0], &map[0][0] + 9 * 9, &tmp_map[0][0]);
-
-	if(cam_size >0) DFS(0, tmp_map);
-	else {
-		result = 0;
-		for (int i = 0; i < n * m; i++) if (map[i / m][i % m] == 0)result++;
-	}
- 	printf("%d", result);
-	return 0;
-}
-
-void DFS(int idx, int tmp[][9]) {
+void DFS(int idx, short tmp[][9]) {
 	int cur_cam_mode = cam[idx][0];
-	int cur_cam_row  = cam[idx][1];
-	int cur_cam_col  = cam[idx][2];
-	int tmp_tmp[9][9] = { 0, };
+	int cur_cam_row = cam[idx][1];
+	int cur_cam_col = cam[idx][2];
+	short tmp_tmp[9][9] = { 0, };
 	idx++;
 	switch (cur_cam_mode) {
 	case 1:
@@ -78,6 +50,10 @@ void DFS(int idx, int tmp[][9]) {
 			if (idx == cam_size) {
 				int tmp_result = 0;
 				for (int i = 0; i < n * m; i++) if (tmp_tmp[i / m][i % m] == 0)tmp_result++;
+				if (tmp_result == 0) {
+					result = 0;
+					return;
+				}
 				if (tmp_result < result) result = tmp_result;
 				continue;
 			}
@@ -110,6 +86,10 @@ void DFS(int idx, int tmp[][9]) {
 			if (idx == cam_size) {
 				int tmp_result = 0;
 				for (int i = 0; i < n * m; i++) if (tmp_tmp[i / m][i % m] == 0)tmp_result++;
+				if (tmp_result == 0) {
+					result = 0;
+					return;
+				}
 				if (tmp_result < result) result = tmp_result;
 				continue;
 			}
@@ -143,6 +123,10 @@ void DFS(int idx, int tmp[][9]) {
 			if (idx == cam_size) {
 				int tmp_result = 0;
 				for (int i = 0; i < n * m; i++) if (tmp_tmp[i / m][i % m] == 0)tmp_result++;
+				if (tmp_result == 0) {
+					result = 0;
+					return;
+				}
 				if (tmp_result < result) result = tmp_result;
 				continue;
 			}
@@ -185,6 +169,10 @@ void DFS(int idx, int tmp[][9]) {
 			if (idx == cam_size) {
 				int tmp_result = 0;
 				for (int i = 0; i < n * m; i++) if (tmp_tmp[i / m][i % m] == 0)tmp_result++;
+				if (tmp_result == 0) {
+					result = 0;
+					return;
+				}
 				if (tmp_result < result) result = tmp_result;
 				continue;
 			}
@@ -243,4 +231,28 @@ void DFS(int idx, int tmp[][9]) {
 		else if (idx < cam_size) DFS(idx, tmp_tmp);
 		break;
 	}
+}
+
+int main() {
+	scanf("%d %d", &n, &m);
+	for (int i = 0; i < n * m; i++) {
+		scanf("%d", &map[i / m][i % m]);
+		if (map[i / m][i % m] >= 1 && map[i / m][i % m] <= 5) {
+			cam[cam_idx][0] = map[i / m][i % m];
+			cam[cam_idx][1] = i / m;
+			cam[cam_idx][2] = i % m;
+			cam_idx++;
+		}
+	}
+	cam_size = cam_idx;
+	short tmp_map[9][9] = { 0, };
+	copy(&map[0][0], &map[0][0] + 9 * 9, &tmp_map[0][0]);
+
+	if (cam_size > 0) DFS(0, tmp_map);
+	else {
+		result = 0;
+		for (int i = 0; i < n * m; i++) if (map[i / m][i % m] == 0)result++;
+	}
+	printf("%d", result);
+	return 0;
 }
