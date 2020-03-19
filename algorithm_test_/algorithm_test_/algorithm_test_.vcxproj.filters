@@ -37,8 +37,19 @@
     <ClCompile Include="algo_14891_톱니바퀴.cpp" />
     <ClCompile Include="algo_15683_감시.cpp" />
     <ClCompile Include="algo_15684_사다리조작_.cpp" />
+    <ClCompile Include="algo_12141444_0317.cpp">
+      <Filter>class</Filter>
+    </ClCompile>
+    <ClCompile Include="algo_2798_블랙잭.cpp" />
+    <ClCompile Include="algo_2231_분해합.cpp" />
+    <ClCompile Include="algo_7568_덩치.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Text.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="class">
+      <UniqueIdentifier>{b8f9b217-0679-40eb-bcb9-b4c50304eca7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
