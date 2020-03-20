@@ -139,8 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="algo_1003_피보나치함수.cpp" />
     <ClCompile Include="algo_10971_외판원순회2.cpp" />
     <ClCompile Include="algo_10974_모든순열.cpp" />
+    <ClCompile Include="algo_1149_RGB거리.cpp" />
     <ClCompile Include="algo_11559_뿌요뿌요.cpp" />
     <ClCompile Include="algo_12100_2048_.cpp" />
     <ClCompile Include="algo_12141444_0317.cpp" />
@@ -163,6 +165,7 @@
     <ClCompile Include="algo_1697_숨바꼭질.cpp" />
     <ClCompile Include="algo_1759_암호만들기.cpp" />
     <ClCompile Include="algo_1904_01타일.cpp" />
+    <ClCompile Include="algo_1920_수찾기.cpp" />
     <ClCompile Include="algo_2178_미로탐색.cpp" />
     <ClCompile Include="algo_2193_이친수.cpp" />
     <ClCompile Include="algo_2231_분해합.cpp" />
@@ -171,11 +174,13 @@
     <ClCompile Include="algo_2606_바이러스.cpp" />
     <ClCompile Include="algo_2644_촌수계산.cpp" />
     <ClCompile Include="algo_2667_단지번호.cpp" />
+    <ClCompile Include="algo_2748_피보나치2.cpp" />
     <ClCompile Include="algo_2798_블랙잭.cpp" />
     <ClCompile Include="algo_3190_뱀.cpp" />
     <ClCompile Include="algo_7562_나이트의 이동.cpp" />
     <ClCompile Include="algo_7568_덩치.cpp" />
     <ClCompile Include="algo_9095_123더하기.cpp" />
+    <ClCompile Include="algo_9461_파도반수열.cpp" />
     <ClCompile Include="algo_9465_스티커.cpp" />
     <ClCompile Include="algo_14503_로봇청소기.cpp" />
     <ClCompile Include="test_main.cpp" />
