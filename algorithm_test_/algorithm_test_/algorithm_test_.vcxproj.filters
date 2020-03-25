@@ -57,13 +57,17 @@
     <ClCompile Include="algo_2580_스도쿠.cpp" />
     <ClCompile Include="algo_heap_sorting.cpp" />
     <ClCompile Include="algo_odd_even.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Text.txt" />
+    <ClCompile Include="algo_12141777_0324.cpp">
+      <Filter>class</Filter>
+    </ClCompile>
+    <ClCompile Include="algo_gemstone.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="class">
       <UniqueIdentifier>{b8f9b217-0679-40eb-bcb9-b4c50304eca7}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="memo.txt" />
   </ItemGroup>
 </Project>

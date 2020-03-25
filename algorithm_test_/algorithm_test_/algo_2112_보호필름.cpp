@@ -1,68 +1,87 @@
-// 출처 : https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V1SYKAaUDFAWu&
-#pragma warning (disable : 4996)
-#include <cstdio>
-#include <algorithm>
-using namespace std;
-
-int t;
-int map[13][20];
-
-bool check(int d, int w, int kk) {
-	int cnt_c = 0;
-	for (int j = 0; j < w; j++) {
-		int cnt_r = 0;
-		for (int k = 1; k < d; k++) {
-			if (map[k][j] == map[k - 1][j]) cnt_r++;
-			else cnt_r = 0;
-			if (cnt_r == kk - 1) {
-				//printf("%d ok\n", j);
-				cnt_c++;
-				break;
-			}
-		}
-		if (cnt_r != kk - 1) {
-			cnt_c = 0;
-			return false;
-		}
-	}
-	return true;
-}
-void add(int arr[13][20], int d, int w, int kk) {
-	
-	
-}
-
-int main() {
-	scanf("%d", &t);
-	for (int tt = 0; tt < t; tt++) {
-		int d = 0, w = 0, kk = 0;
-		/*for (int i = 0; i < 13 * 20; i++) map[i / 20][i % 20] = 0;*/
-		scanf("%d %d %d", &d, &w, &kk);
-		for (int i = 0; i < d; i++) {
-			for (int j = 0; j < w; j++) {
-				scanf("%d", &map[i][j]);
-			}
-		}
-		bool chk = false;
-		while (!check(d, w, kk) || !chk) {
-			//int tmp_map[13][20] = { 0, };
-			//copy(&map[0][0], &map[0][0] + 13 * 20, &tmp_map[0][0]);
-			for (int i = 0; i < d; i++) {
-				for(int j = 0 ; j < w ; j++) tmp_map[i][j] = 0;
-				if (check(d, w, kk)) {
-					chk = true;
-					break;
-				}
-				for (int j = 0; j < w; j++) tmp_map[i][j] = 1;
-				if (check( d, w, kk)) {
-					chk = true;
-					break;
-				}
-			}
-			
-			
-		}
-		printf("ok\n");
-	}
-	return 0;
-}
+//// 출처 : https://swexpertacademy.com/main/code/problem/problemdetail.do?contestprobid=av5v1sykaaudfawu&
+//#pragma warning(disable : 4996)
+//#include <cstdio>
+//
+//int test_case;
+//int map[13][20];
+//int layer_arr[13];
+//int layer_vis[13];
+//int layer_idx;
+//int d, w, k;
+//bool chk;
+//
+//bool check() {
+//	for (int i = 0; i < w; i++) {
+//		int cnt = 0;
+//		for (int j = 0; j < d - 1; j++) {
+//			if (map[j][i] == map[j + 1][i]) cnt++;
+//			else cnt = 0;
+//			if (cnt == k - 1) break;
+//		}
+//		if (cnt != k - 1) return false;
+//	}
+//	return true;
+//}
+//
+//void change(int idx) {
+//	for (int i = idx; i < layer_idx; i++) {
+//		bool layer_tmp[20] = { 0, };
+//		for (int j = 0; j < w; j++) layer_tmp[j] = map[layer_arr[i]][j];
+//		for (int j = 0; j < w; j++) map[layer_arr[i]][j] = 1;
+//		change(i + 1);
+//		if (chk) return;
+//		if (check()) {
+//			printf("%d\n", layer_idx);
+//			chk = true;
+//			return;
+//		}
+//		for (int j = 0; j < w; j++) map[layer_arr[i]][j] = 0;
+//		change(i + 1);
+//		if (chk) return;
+//		if (check()) {
+//			printf("%d\n", layer_idx);
+//			chk = true;
+//			return;
+//		}
+//		for (int j = 0; j < w; j++) map[layer_arr[i]][j] = layer_tmp[j];
+//	}
+//}
+//
+//void dfs(int idx, int cnt) {
+//	if (layer_idx == cnt) {
+//		change(0);
+//		return;
+//	}
+//	for (int i = idx; i < d; i++) {
+//		layer_arr[layer_idx] = i;
+//		layer_idx++;
+//		dfs(i + 1, cnt);
+//		layer_idx--;
+//		layer_arr[layer_idx] = i;
+//		if (chk) return;
+//	}
+//}
+//
+//int main() {
+//	scanf("%d", &test_case);
+//	for (int t = 0; t < test_case; t++) {
+//		chk = false;
+//		scanf("%d %d %d", &d, &w, &k);
+//		for (int i = 0; i < d; i++) {
+//			for (int j = 0; j < w; j++)
+//				scanf("%d", &map[i][j]);
+//		}
+//		printf("#%d ", t + 1);
+//		if (k == 1 || check()) {
+//			printf("0\n");
+//			continue;
+//		}
+//		for (int i = 1; i < k; i++) {
+//			dfs(0, i);
+//			if (chk) break;
+//		}
+//		if (chk) continue;
+//		printf("%d\n", k);
+//	}
+//	return 0;
+//}
