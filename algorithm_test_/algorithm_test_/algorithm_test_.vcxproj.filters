@@ -62,6 +62,8 @@
     </ClCompile>
     <ClCompile Include="algo_gemstone.cpp" />
     <ClCompile Include="algo_intersect.cpp" />
+    <ClCompile Include="algo_1535_안녕.cpp" />
+    <ClCompile Include="algo_1495_기타리스트.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="class">
@@ -69,6 +71,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="memo.txt" />
+    <Xml Include="test.xml" />
   </ItemGroup>
 </Project>

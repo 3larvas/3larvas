@@ -160,6 +160,8 @@
     <ClCompile Include="algo_14889_스타트와링크.cpp" />
     <ClCompile Include="algo_14890_경사로.cpp" />
     <ClCompile Include="algo_14891_톱니바퀴.cpp" />
+    <ClCompile Include="algo_1495_기타리스트.cpp" />
+    <ClCompile Include="algo_1535_안녕.cpp" />
     <ClCompile Include="algo_15649_n과M_1.cpp" />
     <ClCompile Include="algo_15650_n과m_2.cpp" />
     <ClCompile Include="algo_15651_n과m_3.cpp" />
@@ -198,7 +200,7 @@
     <ClCompile Include="test_main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="memo.txt" />
+    <Xml Include="test.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
