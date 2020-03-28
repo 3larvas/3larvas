@@ -34,26 +34,33 @@
 #include <cstdio>
 
 int n;
-int bad[20];
-int good[20];
-bool dp[20][100];
+int bad[21];
+int good[21];
+int dp[21][101];
 int result;
+
 
 int main() {
 	scanf("%d", &n);
 	for (int i = 0; i < n; i++) scanf("%d", &bad[i]);
 	for (int i = 0; i < n; i++) scanf("%d", &good[i]);
-	dp[0][100] = true;
-	for (int i = 0; i < n; i++) {
-		for (int j = 1; j <= 100 ; j++) {
-			if (dp[i][j]) {
-				if (j - bad[i] >= 0) dp[i + 1][j - bad[i]] = true;
+	
+	dp[1][100 - bad[0]] = good[0];
+
+	for (int i = 1; i < n; i++) {
+		dp[i+1][100 - bad[i]] = good[i];
+		for (int j = 100; j > 0 ; j--) {
+			if (dp[i][j] != 0) {
+				if (j - bad[i] >= 0)
+					dp[i + 1][j - bad[i]] = dp[i][j] + good[i];
+				//dp[i + 1][j] = dp[i][j];
 			}
 		}
 	}
-	for (int i = 0; i < 100; i++) {
-		if (dp[n][i]) {
-			if (result < i) result = i;
+	result = 0;
+	for (int i = 1; i <= 100; i++) {
+		if (dp[n][i] != 0) {
+			if (result < dp[n][i]) result = dp[n][i];
 		}
 	}
 	printf("%d", result);
