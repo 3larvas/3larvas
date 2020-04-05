@@ -69,6 +69,7 @@
     </ClCompile>
     <ClCompile Include="algo_1106_호텔.cpp" />
     <ClCompile Include="algo_sorting_ex.cpp" />
+    <ClCompile Include="algo_1106_contact.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="class">

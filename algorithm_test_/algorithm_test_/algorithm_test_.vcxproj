@@ -142,6 +142,7 @@
     <ClCompile Include="algo_1003_피보나치함수.cpp" />
     <ClCompile Include="algo_10971_외판원순회2.cpp" />
     <ClCompile Include="algo_10974_모든순열.cpp" />
+    <ClCompile Include="algo_1106_contact.cpp" />
     <ClCompile Include="algo_1106_호텔.cpp" />
     <ClCompile Include="algo_1149_RGB거리.cpp" />
     <ClCompile Include="algo_11559_뿌요뿌요.cpp" />

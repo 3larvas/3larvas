@@ -1,57 +1,32 @@
-// 출처 : https://www.acmicpc.net/problem/1106
-#pragma warning (disable : 4996)
-#include <cstdio>
-#include <tuple>
-#include <algorithm>
-using namespace std;
-
-int c, n;
-tuple<int, int, double> list[21];
-int result = 999999;
-int result_cost;
-
-struct biggerThan
-{
-	bool operator()(tuple<int, int, double> const& lhs, tuple<int, int, double> const& rhs) const
-	{
-		return std::get<2>(lhs) > std::get<2>(rhs);
-	}
-};
-
-void search(int idx, int sum_cost, int sum_num) {
-	if (sum_num >= c) {
-		if(result> sum_cost)
-			result = sum_cost;
-		return;
-	} 
-	for (int i = idx; i < n; i++) {
-		search(i, sum_cost + get<0>(list[i]), sum_num + get<1>(list[i]));
-	}
-}
-
-int main() {
-	scanf("%d %d", &c, &n);
-	for (int i = 0; i < n; i++) {
-		int a = 0, b = 0;
-		scanf("%d %d", &a, &b);
-		list[i] = make_tuple(a, b, b / a);
-	} 
-	sort(list, list + n, biggerThan());
-	int sum_num  = 0;
-	int sum_cost = 0;
-	while (sum_num + get<1>(list[0]) < c) {
-		sum_cost += get<0>(list[0]);
-		sum_num  += get<1>(list[0]);
-	}
-
-	//for (int i = 0; i < n; i++) {
-	//	if (sum_num + get<1>(list[i]) >= c) {
-	//		if (result > sum_cost + get<0>(list[i])){
-	//			result = sum_cost + get<0>(list[i]);
-	//		}			
-	//	}		
-	//}
-	search(0, sum_cost, sum_num);
-	printf("%d", result);
-	return 0;
-}
+////// 출처 : https://www.acmicpc.net/problem/1106
+//#pragma warning (disable : 4996)
+//#include <cstdio>
+//using namespace std;
+//
+//int c, n;
+//int list[21][2];
+//int d[1001];
+//
+//int min(int a, int b) {
+//    return a < b ? a : b;
+//}
+//
+//int main() {
+//	scanf("%d %d", &c, &n);
+//	for (int i = 0; i < n; i++) 
+//		scanf("%d %d", &list[i][0], &list[i][1]);
+//    for (int i = 1; i < 1001; i++) d[i] = 1000000;
+//	int sum_num  = 0;
+//	int sum_cost = 1000000;
+//	while (sum_num <= c) {
+//        for (int i = 0; i < n; i++) {
+//            if (sum_num + list[i][1] >= c)
+//                sum_cost = min(sum_cost, d[sum_num] + list[i][0]);
+//            else // 다음칸에는 min(다음칸 원래값, 새로운값)
+//                d[sum_num + list[i][1]] = min(d[sum_num + list[i][1]], d[sum_num] + list[i][0]);
+//        }
+//		sum_num++;
+//	}
+//	printf("%d", sum_cost);
+//	return 0;
+//}
