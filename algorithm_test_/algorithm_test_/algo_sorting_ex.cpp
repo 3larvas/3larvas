@@ -125,23 +125,23 @@
 //
 //void quickSorting(int* tmp_arr, int start, int end) {
 //	if (start >= end) return;
-//	int pivot_idx = start;
-//	int i = start + 1;
-//	int j = end;
-//	while (i <= j) {
-//		while (i <= end  && tmp_arr[i] <= tmp_arr[pivot_idx]) i++;
-//		while (j > start && tmp_arr[j] >= tmp_arr[pivot_idx]) j--;
-//		if (i > j) {
-//			int tmp = tmp_arr[j];
-//			tmp_arr[j] = tmp_arr[pivot_idx];
+//	int pivot_idx = start; // 첫번째 원소로 피봇으로 함.
+//	int left = start + 1;
+//	int right = end;
+//	while (left <= right) {
+//		while (left <= right && tmp_arr[left] <= tmp_arr[pivot_idx]) left++;
+//		while (left <= right && tmp_arr[right] >= tmp_arr[pivot_idx]) right--;
+//		if (left > right) {
+//			int tmp = tmp_arr[right];
+//			tmp_arr[right] = tmp_arr[pivot_idx];
 //			tmp_arr[pivot_idx] = tmp;
 //		}
 //		else {
-//			int tmp = tmp_arr[i];
-//			tmp_arr[i] = tmp_arr[j];
-//			tmp_arr[j] = tmp;
+//			int tmp = tmp_arr[left];
+//			tmp_arr[left] = tmp_arr[right];
+//			tmp_arr[right] = tmp;
 //		}
 //	}
-//	quickSorting(tmp_arr, start, j - 1);
-//	quickSorting(tmp_arr, j + 1, end);
+//	quickSorting(tmp_arr, start, right - 1);
+//	quickSorting(tmp_arr, right + 1, end);
 //}
