@@ -178,6 +178,7 @@
     <ClCompile Include="algo_1600_말이되고싶은_원숭이.cpp" />
     <ClCompile Include="algo_1697_숨바꼭질.cpp" />
     <ClCompile Include="algo_1759_암호만들기.cpp" />
+    <ClCompile Include="algo_1786_찾기.cpp" />
     <ClCompile Include="algo_1904_01타일.cpp" />
     <ClCompile Include="algo_1920_수찾기.cpp" />
     <ClCompile Include="algo_2112_보호필름.cpp" />

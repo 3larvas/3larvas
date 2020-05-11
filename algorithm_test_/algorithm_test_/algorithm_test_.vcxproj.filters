@@ -82,6 +82,7 @@
     <ClCompile Include="algo_12141777_0505.cpp">
       <Filter>class</Filter>
     </ClCompile>
+    <ClCompile Include="algo_1786_찾기.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="class">
