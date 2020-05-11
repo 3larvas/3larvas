@@ -82,6 +82,9 @@
     <ClCompile Include="algo_12141777_0505.cpp">
       <Filter>class</Filter>
     </ClCompile>
+    <ClCompile Include="algo_12141777_0512.cpp">
+      <Filter>class</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="class">
