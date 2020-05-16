@@ -207,6 +207,7 @@
     <ClCompile Include="algo_intersect.cpp" />
     <ClCompile Include="algo_odd_even.cpp" />
     <ClCompile Include="algo_sorting_ex.cpp" />
+    <ClCompile Include="sam_13460_구슬.cpp" />
     <ClCompile Include="test_main.cpp" />
   </ItemGroup>
   <ItemGroup>
