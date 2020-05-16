@@ -204,10 +204,11 @@
     <ClCompile Include="algo_9663_n_queen.cpp" />
     <ClCompile Include="algo_gemstone.cpp" />
     <ClCompile Include="algo_heap_sorting.cpp" />
+    <ClCompile Include="algo_hyffman_code.cpp" />
     <ClCompile Include="algo_intersect.cpp" />
     <ClCompile Include="algo_odd_even.cpp" />
     <ClCompile Include="algo_sorting_ex.cpp" />
-    <ClCompile Include="sam_13460_구슬.cpp" />
+    <ClCompile Include="priorty_queue.cpp" />
     <ClCompile Include="test_main.cpp" />
   </ItemGroup>
   <ItemGroup>
