@@ -88,6 +88,9 @@
     <ClCompile Include="algo_1786_찾기.cpp" />
     <ClCompile Include="priorty_queue.cpp" />
     <ClCompile Include="algo_hyffman_code.cpp" />
+    <ClCompile Include="sam_13460_구슬.cpp" />
+    <ClCompile Include="sam_12100_2048.cpp" />
+    <ClCompile Include="sam_16236_아기상어.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="class">
