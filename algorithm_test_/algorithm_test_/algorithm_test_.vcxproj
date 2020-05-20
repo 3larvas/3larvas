@@ -212,6 +212,7 @@
     <ClCompile Include="sam_12100_2048.cpp" />
     <ClCompile Include="sam_13460_구슬.cpp" />
     <ClCompile Include="sam_16236_아기상어.cpp" />
+    <ClCompile Include="sam_17144_미세먼지.cpp" />
     <ClCompile Include="test_main.cpp" />
   </ItemGroup>
   <ItemGroup>
