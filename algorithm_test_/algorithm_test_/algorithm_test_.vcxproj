@@ -155,6 +155,7 @@
     <ClCompile Include="algo_12141777_0428.cpp" />
     <ClCompile Include="algo_12141777_0505.cpp" />
     <ClCompile Include="algo_12141777_0512.cpp" />
+    <ClCompile Include="algo_12141777_0519.cpp" />
     <ClCompile Include="algo_1260_DFS_BFS.cpp" />
     <ClCompile Include="algo_12761_돌다리.cpp" />
     <ClCompile Include="algo_13458_시험감독.cpp" />
