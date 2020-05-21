@@ -1,10 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <ClCompile Include="algo_1003_피보나치함수.cpp" />
     <ClCompile Include="algo_10971_외판원순회2.cpp" />
     <ClCompile Include="algo_10974_모든순열.cpp" />
+    <ClCompile Include="algo_1106_contact.cpp" />
+    <ClCompile Include="algo_1106_호텔.cpp" />
+    <ClCompile Include="algo_1149_RGB거리.cpp" />
     <ClCompile Include="algo_11559_뿌요뿌요.cpp" />
     <ClCompile Include="algo_12100_2048_.cpp" />
+    <ClCompile Include="algo_12141444_0317.cpp" />
+    <ClCompile Include="algo_12141777_0324.cpp" />
+    <ClCompile Include="algo_12141777_0331.cpp" />
+    <ClCompile Include="algo_12141777_0407.cpp" />
+    <ClCompile Include="algo_12141777_0421.cpp" />
+    <ClCompile Include="algo_12141777_0428.cpp" />
+    <ClCompile Include="algo_12141777_0505.cpp" />
+    <ClCompile Include="algo_12141777_0512.cpp" />
+    <ClCompile Include="algo_12141777_0519.cpp" />
     <ClCompile Include="algo_1260_DFS_BFS.cpp" />
     <ClCompile Include="algo_12761_돌다리.cpp" />
     <ClCompile Include="algo_13458_시험감독.cpp" />
@@ -12,91 +25,60 @@
     <ClCompile Include="algo_14499_주사위굴리기.cpp" />
     <ClCompile Include="algo_14500_테트로미노.cpp" />
     <ClCompile Include="algo_14501_퇴사.cpp" />
-    <ClCompile Include="algo_1463_1로만들기.cpp" />
-    <ClCompile Include="algo_1600_말이되고싶은_원숭이.cpp" />
-    <ClCompile Include="algo_1697_숨바꼭질.cpp" />
-    <ClCompile Include="algo_1759_암호만들기.cpp" />
-    <ClCompile Include="algo_1904_01타일.cpp" />
-    <ClCompile Include="algo_2178_미로탐색.cpp" />
-    <ClCompile Include="algo_2193_이친수.cpp" />
-    <ClCompile Include="algo_2294_동전2.cpp" />
-    <ClCompile Include="algo_2573_빙산.cpp" />
-    <ClCompile Include="algo_2606_바이러스.cpp" />
-    <ClCompile Include="algo_2644_촌수계산.cpp" />
-    <ClCompile Include="algo_2667_단지번호.cpp" />
-    <ClCompile Include="algo_3190_뱀.cpp" />
-    <ClCompile Include="algo_7562_나이트의 이동.cpp" />
-    <ClCompile Include="algo_9095_123더하기.cpp" />
-    <ClCompile Include="algo_9465_스티커.cpp" />
-    <ClCompile Include="test_main.cpp" />
     <ClCompile Include="algo_14502_연구소.cpp" />
-    <ClCompile Include="algo_14503_로봇청소기.cpp" />
+    <ClCompile Include="algo_1463_1로만들기.cpp" />
     <ClCompile Include="algo_14888_연산자끼워넣기.cpp" />
     <ClCompile Include="algo_14889_스타트와링크.cpp" />
     <ClCompile Include="algo_14890_경사로.cpp" />
     <ClCompile Include="algo_14891_톱니바퀴.cpp" />
-    <ClCompile Include="algo_15683_감시.cpp" />
-    <ClCompile Include="algo_15684_사다리조작_.cpp" />
-    <ClCompile Include="algo_12141444_0317.cpp">
-      <Filter>class</Filter>
-    </ClCompile>
-    <ClCompile Include="algo_2798_블랙잭.cpp" />
-    <ClCompile Include="algo_2231_분해합.cpp" />
-    <ClCompile Include="algo_7568_덩치.cpp" />
-    <ClCompile Include="algo_1920_수찾기.cpp" />
-    <ClCompile Include="algo_2748_피보나치2.cpp" />
-    <ClCompile Include="algo_1003_피보나치함수.cpp" />
-    <ClCompile Include="algo_9461_파도반수열.cpp" />
-    <ClCompile Include="algo_1149_RGB거리.cpp" />
-    <ClCompile Include="algo_2112_보호필름.cpp" />
+    <ClCompile Include="algo_1495_기타리스트.cpp" />
+    <ClCompile Include="algo_1535_안녕.cpp" />
     <ClCompile Include="algo_15649_n과M_1.cpp" />
     <ClCompile Include="algo_15650_n과m_2.cpp" />
     <ClCompile Include="algo_15651_n과m_3.cpp" />
     <ClCompile Include="algo_15652_n과m_4.cpp" />
-    <ClCompile Include="algo_9663_n_queen.cpp" />
-    <ClCompile Include="algo_2580_스도쿠.cpp" />
-    <ClCompile Include="algo_heap_sorting.cpp" />
-    <ClCompile Include="algo_odd_even.cpp" />
-    <ClCompile Include="algo_12141777_0324.cpp">
-      <Filter>class</Filter>
-    </ClCompile>
-    <ClCompile Include="algo_gemstone.cpp" />
-    <ClCompile Include="algo_intersect.cpp" />
-    <ClCompile Include="algo_1535_안녕.cpp" />
-    <ClCompile Include="algo_1495_기타리스트.cpp" />
-    <ClCompile Include="algo_12141777_0331.cpp">
-      <Filter>class</Filter>
-    </ClCompile>
-    <ClCompile Include="algo_1106_호텔.cpp" />
-    <ClCompile Include="algo_sorting_ex.cpp" />
-    <ClCompile Include="algo_1106_contact.cpp" />
-    <ClCompile Include="algo_12141777_0407.cpp">
-      <Filter>class</Filter>
-    </ClCompile>
-    <ClCompile Include="algo_12141777_0421.cpp">
-      <Filter>class</Filter>
-    </ClCompile>
-    <ClCompile Include="algo_12141777_0428.cpp">
-      <Filter>class</Filter>
-    </ClCompile>
-    <ClCompile Include="algo_12141777_0505.cpp">
-      <Filter>class</Filter>
-    </ClCompile>
-    <ClCompile Include="algo_12141777_0512.cpp">
-      <Filter>class</Filter>
-    </ClCompile>
+    <ClCompile Include="algo_15683_감시.cpp" />
+    <ClCompile Include="algo_15684_사다리조작_.cpp" />
+    <ClCompile Include="algo_1600_말이되고싶은_원숭이.cpp" />
+    <ClCompile Include="algo_1697_숨바꼭질.cpp" />
+    <ClCompile Include="algo_1759_암호만들기.cpp" />
     <ClCompile Include="algo_1786_찾기.cpp" />
-    <ClCompile Include="priorty_queue.cpp" />
+    <ClCompile Include="algo_1904_01타일.cpp" />
+    <ClCompile Include="algo_1920_수찾기.cpp" />
+    <ClCompile Include="algo_2112_보호필름.cpp" />
+    <ClCompile Include="algo_2178_미로탐색.cpp" />
+    <ClCompile Include="algo_2193_이친수.cpp" />
+    <ClCompile Include="algo_2231_분해합.cpp" />
+    <ClCompile Include="algo_2294_동전2.cpp" />
+    <ClCompile Include="algo_2573_빙산.cpp" />
+    <ClCompile Include="algo_2580_스도쿠.cpp" />
+    <ClCompile Include="algo_2606_바이러스.cpp" />
+    <ClCompile Include="algo_2644_촌수계산.cpp" />
+    <ClCompile Include="algo_2667_단지번호.cpp" />
+    <ClCompile Include="algo_2748_피보나치2.cpp" />
+    <ClCompile Include="algo_2798_블랙잭.cpp" />
+    <ClCompile Include="algo_3190_뱀.cpp" />
+    <ClCompile Include="algo_7562_나이트의 이동.cpp" />
+    <ClCompile Include="algo_7568_덩치.cpp" />
+    <ClCompile Include="algo_9095_123더하기.cpp" />
+    <ClCompile Include="algo_9461_파도반수열.cpp" />
+    <ClCompile Include="algo_9465_스티커.cpp" />
+    <ClCompile Include="algo_14503_로봇청소기.cpp" />
+    <ClCompile Include="algo_9663_n_queen.cpp" />
+    <ClCompile Include="algo_gemstone.cpp" />
+    <ClCompile Include="algo_heap_sorting.cpp" />
     <ClCompile Include="algo_hyffman_code.cpp" />
-    <ClCompile Include="sam_13460_구슬.cpp" />
+    <ClCompile Include="algo_intersect.cpp" />
+    <ClCompile Include="algo_odd_even.cpp" />
+    <ClCompile Include="algo_sorting_ex.cpp" />
+    <ClCompile Include="priorty_queue.cpp" />
     <ClCompile Include="sam_12100_2048.cpp" />
+    <ClCompile Include="sam_13460_구슬.cpp" />
     <ClCompile Include="sam_16236_아기상어.cpp" />
     <ClCompile Include="sam_17144_미세먼지.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Filter Include="class">
-      <UniqueIdentifier>{b8f9b217-0679-40eb-bcb9-b4c50304eca7}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="test_main.cpp" />
+    <ClCompile Include="sam_17140_이차원배열과연산.cpp" />
+    <ClCompile Include="sma_7837_새로운게임2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="test.xml" />
