@@ -82,6 +82,7 @@
     <ClCompile Include="sam_17142_연구소.cpp" />
     <ClCompile Include="sam_17779_게리맨더링2.cpp" />
     <ClCompile Include="sam_17825_주사위윷놀이.cpp" />
+    <ClCompile Include="algo_12141777_0526.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="test.xml" />
