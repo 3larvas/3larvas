@@ -1,6 +1,7 @@
 ////https://www.acmicpc.net/problem/17825
 //#pragma warning(disable : 4996)
 //#include <stdio.h>
+//#include <vector>
 //using namespace std;
 //
 //int map[24][4] =
@@ -31,21 +32,23 @@
 //	{0, 0, 0, 0}
 //};
 //struct player {
-//	int  step, type, value;
+//	int  step, type, value, cnt;
 //	bool chk;
+//	vector<pair<int,int>> ser;
 //
 //};
 //int input[10];
 //player player_list[4];
 //int result;
+//int cnt_t;
 //
 //void DFS(int cnt) {
 //	if (cnt == 10) {
-//		//printf("END\n");
-//		printf("%d\n", player_list[0].value + player_list[1].value + player_list[2].value + player_list[3].value);
+//		cnt_t++;
+//		//printf("%d\n", player_list[0].value + player_list[1].value + player_list[2].value + player_list[3].value);
 //		int tmp_result = player_list[0].value + player_list[1].value + player_list[2].value + player_list[3].value;
 //		if (tmp_result > result) result = tmp_result;
-//		if (tmp_result == 213) {
+//		if (tmp_result == 214) {
 //			printf("");
 //		}
 //		return;
@@ -58,12 +61,29 @@
 //				dup_chk = true;
 //				break;
 //			}
+//			int tmp_val = map[player_list[i].step + input[cnt]][player_list[i].type];
+//			if (tmp_val == map[player_list[j].step][player_list[j].type]) {
+//				switch (tmp_val) {
+//				case 25:
+//					dup_chk = true;
+//					break;
+//				case 40:
+//					dup_chk = true;
+//					break;
+//				}
+//			}
 //		}
-//		if (dup_chk) continue;
+//		if (dup_chk) {
+//			dup_chk = false;
+//			continue;
+//		}
+//		player pre_player = player_list[i];
 //		player_list[i].step  += input[cnt];
 //		player_list[i].value += map[player_list[i].step][player_list[i].type];
+//		player_list[i].ser.push_back(make_pair(input[cnt],cnt));
+//		player_list[i].cnt++;
 //		int pre_type = player_list[i].type;
-//		if (map[player_list[i].step][player_list[i].type]%10==0) {
+//		if (map[player_list[i].step][player_list[i].type]%10==0 && player_list[i].type==0) {
 //			switch (map[player_list[i].step][player_list[i].type]) {
 //			case 10:
 //				player_list[i].type = 1;
@@ -78,58 +98,38 @@
 //		}
 //		switch (player_list[i].type) {
 //		case 0:
-//			if (player_list[i].step >= 20)
+//			if (player_list[i].step >= 21) {
+//				player_list[i].step *= -1;
 //				player_list[i].chk = true;
+//			}
 //			break;
 //		case 1:
-//			if (player_list[i].step >= 12)
+//			if (player_list[i].step >= 13) {
+//				player_list[i].step *= -1;
 //				player_list[i].chk = true;
+//			}
 //			break;
 //		case 2:
-//			if (player_list[i].step >= 16)
+//			if (player_list[i].step >= 17) {
+//				player_list[i].step *= -1;
 //				player_list[i].chk = true;
+//			}
 //			break;
 //		case 3:
-//			if (player_list[i].step >= 23)
+//			if (player_list[i].step >= 23) {
+//				player_list[i].step *= -1;
 //				player_list[i].chk = true;
+//			}
 //			break;
 //		}
-//		
 //		DFS(cnt + 1);
-//
-//		switch (player_list[i].type) {
-//		case 0:
-//			if (player_list[i].step >= 20)
-//				player_list[i].chk = false;
-//			break;
-//		case 1:
-//			if (player_list[i].step >= 12)
-//				player_list[i].chk = false;
-//			break;
-//		case 2:
-//			if (player_list[i].step >= 16)
-//				player_list[i].chk = false;
-//			break;
-//		case 3:
-//			if (player_list[i].step >= 23)
-//				player_list[i].chk = false;
-//			break;
-//		}
-//		if (map[player_list[i].step][pre_type] % 10 == 0
-//			&& map[player_list[i].step][pre_type] > 0) {
-//			player_list[i].type = 0;
-//		}
-//		player_list[i].value -= map[player_list[i].step][pre_type];
-//		player_list[i].step  -= input[cnt];
-//		
+//		player_list[i] = pre_player;
 //	}
-//
 //}
 //
 //int main() {
 //	for (int i = 0; i < 10; i++)
 //		scanf("%d", &input[i]);
-//
 //	DFS(0);
 //	printf("%d", result);
 //	return 0;
