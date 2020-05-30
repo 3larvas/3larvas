@@ -86,6 +86,11 @@
     <ClCompile Include="sam_17822_원판돌리기.cpp" />
     <ClCompile Include="sam_17143_낚시왕.cpp" />
     <ClCompile Include="san_16235_나무재테크.cpp" />
+    <ClCompile Include="algo_11404_플로이드.cpp" />
+    <ClCompile Include="algo_12865_평범한배낭.cpp" />
+    <ClCompile Include="algo_2098_tsp.cpp" />
+    <ClCompile Include="sam_16234_인구이동.cpp" />
+    <ClCompile Include="algo_2098_외판원.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="test.xml" />

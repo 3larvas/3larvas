@@ -1,88 +1,95 @@
+//#pragma warning (disable : 4996)
 //#include <stdio.h>
-//#include <string.h>
+//using namespace std;
+//int arr[10];
+//char input[10];
 //
-//int next[50];
-////
-//
-//void InitNext(char* p){
-//	int i, j = 0, M = strlen(p);
-//	next[0] = -1;
-//	for (i = 0, j = -1; i < M; i++, j++) {
-//		next[i] = j; //원래버전
-//		//next[i] = (p[i] == p[j]) ? next[j] : j; //개선된버전
-//		while ((j >= 0) && (p[i] != p[j]))
-//			j = next[j];
+//int main() {
+//	scanf("%s", input);
+//	for (int i = 0; i < 10; i++) {
+//		arr[i] = (int)input[i];
+//		printf("%d ", arr[i]);
 //	}
-//
-//}
-//
-////
-////int main()
-////{
-////	//char p[50] = "10100111";
-////	char p[50] = "abababca";  //abababca
-////
-////	//char p[50] = "AABAA";
-////	//char p[50] = "ABAABAB";
-////	//char p[50] = "AAAAA";
-////	//char p[50] = "abababca";
-////	int i, M = strlen(p);
-////	InitNext(p);
-////	for (i = 0; i < M; i++)
-////		printf("%d ", next[i]);
-////	printf("\n");
-////	return 0;
-////}
-//
-//
-//
-//int KMP(char *p, char *t)
-//{
-//	int i, j, M = strlen(p), N = strlen(t);
-//	InitNext(p);
-//	for (i = 0, j = 0; j < M && i < N; i++, j++)
-//		while ((j >= 0) && (t[i] != p[j])) j = next[j];
-//	if (j == M) return i - M;
-//	else return i;
-//}
-//
-//int main()
-//{
-//	//char text[100] = "1001110100101000101001110";
-//	//char pattern[50] = "10100111";
-//
-//
-//	//char text[100] = "ababababcababababcaabbabababcaab";
-//	//char pattern[50] = "abababca";
-//
-//	char text[100] = "AABAAbabcababAABAAaabbabAABAAaab";
-//	char pattern[50] = 	"AABAA";
-//	int M, N, pos, previous = 0, i = 0;
-//
-//	M = strlen(pattern); N = strlen(text);
-//	while (1) {
-//		pos = KMP(pattern, text + i);
-//		pos += previous;
-//		i = pos + M;
-//		if (i <= N) printf("패턴이 발생한 위치 : %d\n", pos);
-//		else break;
-//		previous = i;
-//	}
-//	printf("스트링 탐색 종료.\n");
 //	return 0;
 //}
+////////////////////////////////////////////////////////////////////////////////
+//#include <iostream>
+//using namespace std;
 //
-///*
-//next[0] = -1;
-//for (int i = 1; i<=M; i++)
-//{
-////if (p[i] == p[j]) next[i] = next[j];
-//while (j > 0 && p[i] != p[j]) j = next[j];
-//if (p[i] == p[j])
-//{
-//next[i + 1] = ++j;
-////printf("%c, %c\n", p[i + 1], p[j]);
-//if (p[i] == p[j]) next[i+1] = next[j-1];
+//struct Node {
+//    int data;
+//    Node* next;
+//};
+//
+//Node* top = NULL;
+//
+//void push(int data) {
+//    Node* node = new Node();
+//    node->data = data;
+//    node->next = top;
+//    top = node;
 //}
+//
+//void Top() {
+//    if (top != NULL) {
+//        cout << "top : " << top->data;
+//    }
+//    else {
+//        cout << "top is NULL";
+//    }
+//    cout << endl;
 //}
-//*/
+//
+//void pop() {
+//    if (top == NULL) {
+//        cout << "stack underflow" << endl;
+//    }
+//    else {
+//        cout << "pop : " << top->data << endl;
+//        top = top->next;
+//    }
+//}
+//
+//void display() {
+//    Node* ptr;
+//    if (top == NULL) {
+//        cout << "stack is empty";
+//    }
+//    else {
+//        ptr = top;
+//        cout << "stack element : ";
+//        while (ptr != NULL) {
+//            cout << ptr->data << " ";
+//            ptr = ptr->next;
+//        }
+//    }
+//    cout << endl;
+//}
+//
+//int main() {
+//
+//    display();
+//    Top();
+//
+//    push(1);
+//    push(2);
+//    push(3);
+//
+//    display();
+//    Top();
+//
+//    pop();
+//    pop();
+//
+//    display();
+//    Top();
+//
+//    push(5);
+//
+//    display();
+//    Top();
+//
+//    return 0;
+//}
+//////////////////////////////////////////////////////////////////////
+
