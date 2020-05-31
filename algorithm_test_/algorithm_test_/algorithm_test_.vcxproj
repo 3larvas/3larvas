@@ -200,6 +200,7 @@
     <ClCompile Include="algo_2667_단지번호.cpp" />
     <ClCompile Include="algo_2748_피보나치2.cpp" />
     <ClCompile Include="algo_2798_블랙잭.cpp" />
+    <ClCompile Include="algo_3055_탈출.cpp" />
     <ClCompile Include="algo_3190_뱀.cpp" />
     <ClCompile Include="algo_7562_나이트의 이동.cpp" />
     <ClCompile Include="algo_7568_덩치.cpp" />
