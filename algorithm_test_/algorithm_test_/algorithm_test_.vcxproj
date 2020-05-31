@@ -218,6 +218,7 @@
     <ClCompile Include="priorty_queue.cpp" />
     <ClCompile Include="sam_12100_2048.cpp" />
     <ClCompile Include="sam_13460_구슬.cpp" />
+    <ClCompile Include="sam_14889_스타트와링크.cpp" />
     <ClCompile Include="sam_16234_인구이동.cpp" />
     <ClCompile Include="sam_16236_아기상어.cpp" />
     <ClCompile Include="sam_17140_이차원배열과연산.cpp" />

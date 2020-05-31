@@ -92,6 +92,7 @@
     <ClCompile Include="sam_16234_인구이동.cpp" />
     <ClCompile Include="algo_2098_외판원.cpp" />
     <ClCompile Include="algo_3055_탈출.cpp" />
+    <ClCompile Include="sam_14889_스타트와링크.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="test.xml" />
