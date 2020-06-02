@@ -129,3 +129,87 @@
 //		printf("%d, ", arr[i]);
 //	return 0;
 //}
+
+//////////////////////////
+//#pragma warning (disable : 4996)
+//#include <stdio.h>
+//using namespace std;
+//int arr[10] = {6, 4, 5, 3, 2, 8, 9, 7, 1, 10};
+//
+//int main() {
+//	for (int i = 1; i < 10; i++) {
+//		int idx = i - 1;
+//		while (idx >= 0 && arr[idx] > arr[idx + 1]) {
+//			int tmp = arr[idx];
+//			arr[idx] = arr[idx+1];
+//			arr[idx+1] = tmp;
+//			idx--;
+//		}
+//	}
+//	for (int i = 0; i < 10; i++) printf("%d ", arr[i]);
+//	return 0;
+//
+//
+//#pragma warning (disable : 4996)
+//#include <stdio.h>
+//#include <string>
+//#include <stack>
+//#include <iostream>
+//using namespace std;
+//
+//int main() {
+//	string str;
+//	cin >> str;
+//	stack<char> stk;
+//	for (int i = 0; i < str.size(); i++) stk.push(str.at(i));
+//	int size = str.size();
+//	for (int i = 0; i < size; i++) {
+//		printf("%c", stk.top());
+//		stk.pop();
+//	}
+//	return 0;
+//}
+
+////////////////////////////////////////////////
+
+//#pragma warning (disable : 4996)
+//#include <stdio.h>
+//#include <string>
+//#include <stack>
+//#include <iostream>
+//using namespace std;
+//
+//int main() {
+//	string str;
+//	cin >> str;
+//	int size = str.size();
+//	for (int i = 0; i < size; i++) {
+//		cout << (int)str.at(i) << " ";
+//	}
+//	return 0;
+//}
+//
+//#pragma warning (disable : 4996)
+//#include <stdio.h>
+//using namespace std;
+//struct Node {
+//	Node* next;
+//	int data;
+//};
+//Node* front = NULL;
+//
+//void push(int input) {
+//	Node* node = new Node();
+//	node->data = input;
+//	node->next = front;
+//	front = node;
+//}
+//
+//void pop() {
+//	front = front->next;
+//}
+//
+//int main() {
+//	
+//	return 0;
+//}

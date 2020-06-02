@@ -93,6 +93,9 @@
     <ClCompile Include="algo_2098_외판원.cpp" />
     <ClCompile Include="algo_3055_탈출.cpp" />
     <ClCompile Include="sam_14889_스타트와링크.cpp" />
+    <ClCompile Include="sam_2105_디저트카페.cpp" />
+    <ClCompile Include="algo_12141777_0602.cpp" />
+    <ClCompile Include="sam_15685_드래곤커브.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="test.xml" />
