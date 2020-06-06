@@ -100,8 +100,8 @@
     <ClCompile Include="sam_5658_보물상자비밀번호.cpp" />
     <ClCompile Include="sam_15686_치킨배달.cpp" />
     <ClCompile Include="algo_2468_안전영역.cpp" />
-    <ClCompile Include="sam_2115_벌꿀채취.cpp" />
     <ClCompile Include="algo_9205_맥주마시면서걸어가기.cpp" />
+    <ClCompile Include="sam_5644_무선충전.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="test.xml" />
