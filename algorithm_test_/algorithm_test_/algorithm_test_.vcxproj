@@ -194,6 +194,7 @@
     <ClCompile Include="algo_2193_이친수.cpp" />
     <ClCompile Include="algo_2231_분해합.cpp" />
     <ClCompile Include="algo_2294_동전2.cpp" />
+    <ClCompile Include="algo_2468_안전영역.cpp" />
     <ClCompile Include="algo_2573_빙산.cpp" />
     <ClCompile Include="algo_2580_스도쿠.cpp" />
     <ClCompile Include="algo_2606_바이러스.cpp" />
@@ -206,6 +207,7 @@
     <ClCompile Include="algo_7562_나이트의 이동.cpp" />
     <ClCompile Include="algo_7568_덩치.cpp" />
     <ClCompile Include="algo_9095_123더하기.cpp" />
+    <ClCompile Include="algo_9205_맥주마시면서걸어가기.cpp" />
     <ClCompile Include="algo_9461_파도반수열.cpp" />
     <ClCompile Include="algo_9465_스티커.cpp" />
     <ClCompile Include="algo_14503_로봇청소기.cpp" />
@@ -232,6 +234,7 @@
     <ClCompile Include="sam_17822_원판돌리기.cpp" />
     <ClCompile Include="sam_17825_주사위윷놀이.cpp" />
     <ClCompile Include="sam_2105_디저트카페.cpp" />
+    <ClCompile Include="sam_2115_벌꿀채취.cpp" />
     <ClCompile Include="sam_5653_줄기세포배양.cpp" />
     <ClCompile Include="sam_5658_보물상자비밀번호.cpp" />
     <ClCompile Include="san_16235_나무재테크.cpp" />
