@@ -4,6 +4,7 @@
 using namespace std;
 int state, N;
 int map[1001][1001];
+int dp[1001][1001];
 int dir_x[2] = { 0, 1 };
 int dir_y[2] = { 1, 0 };
 
@@ -35,6 +36,7 @@ int main() {
 			scanf("%d", &map[i][j]);
 		}
 	}
-
+	int cur_x = 0, cur_y = 0;
+	for()
 	return 0;
 }
