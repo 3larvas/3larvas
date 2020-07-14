@@ -10,7 +10,7 @@
 //struct text_info {
 //	char txt[10];
 //	int	 pos;
-//	int seq;
+//	int  seq;
 //};
 //vector<text_info> text_vec;
 //// next 배열 생성

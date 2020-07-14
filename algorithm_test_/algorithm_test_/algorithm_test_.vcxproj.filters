@@ -102,6 +102,9 @@
     <ClCompile Include="algo_2468_안전영역.cpp" />
     <ClCompile Include="sam_2115_벌꿀채취.cpp" />
     <ClCompile Include="algo_9205_맥주마시면서걸어가기.cpp" />
+    <ClCompile Include="algo_14720_우유축제.cpp" />
+    <ClCompile Include="algo_14722_우유도시.cpp" />
+    <ClCompile Include="algo_1562_계단수.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="test.xml" />
