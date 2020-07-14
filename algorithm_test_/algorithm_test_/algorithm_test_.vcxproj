@@ -235,7 +235,7 @@
     <ClCompile Include="sam_17822_원판돌리기.cpp" />
     <ClCompile Include="sam_17825_주사위윷놀이.cpp" />
     <ClCompile Include="sam_2105_디저트카페.cpp" />
-    <ClCompile Include="sam_2115_벌꿀채취.cpp" />
+    <ClCompile Include="sam_5644_무선충전.cpp" />
     <ClCompile Include="sam_5653_줄기세포배양.cpp" />
     <ClCompile Include="sam_5658_보물상자비밀번호.cpp" />
     <ClCompile Include="san_16235_나무재테크.cpp" />
