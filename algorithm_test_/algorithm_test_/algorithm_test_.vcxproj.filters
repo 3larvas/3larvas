@@ -102,6 +102,8 @@
     <ClCompile Include="algo_2468_안전영역.cpp" />
     <ClCompile Include="algo_9205_맥주마시면서걸어가기.cpp" />
     <ClCompile Include="sam_5644_무선충전.cpp" />
+    <ClCompile Include="algo_12141777_0609.cpp" />
+    <ClCompile Include="algo_12141777_0616.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="test.xml" />

@@ -280,3 +280,14 @@
 //        cout << q.dequeue() << endl;
 //
 //}
+#include <stdio.h>
+#include <string>
+using namespace std;
+
+int main() {
+	string str = "10";
+	int a = 11;
+	string result = to_string(a);
+	printf("%s", result.c_str());
+	return 0;
+}
