@@ -171,6 +171,7 @@
     <ClCompile Include="algo_14501_퇴사.cpp" />
     <ClCompile Include="algo_14502_연구소.cpp" />
     <ClCompile Include="algo_1463_1로만들기.cpp" />
+    <ClCompile Include="algo_14722_우유도시.cpp" />
     <ClCompile Include="algo_14888_연산자끼워넣기.cpp" />
     <ClCompile Include="algo_14889_스타트와링크.cpp" />
     <ClCompile Include="algo_14890_경사로.cpp" />
@@ -242,6 +243,8 @@
     <ClCompile Include="san_16235_나무재테크.cpp" />
     <ClCompile Include="sma_7837_새로운게임2.cpp" />
     <ClCompile Include="test_main.cpp" />
+    <ClCompile Include="algo_14720_우유축제.cpp" />
+    <ClCompile Include="algo_1562_계단수.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="test.xml" />
