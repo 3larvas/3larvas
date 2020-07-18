@@ -159,6 +159,8 @@
     <ClCompile Include="algo_12141777_0519.cpp" />
     <ClCompile Include="algo_12141777_0526.cpp" />
     <ClCompile Include="algo_12141777_0602.cpp" />
+    <ClCompile Include="algo_12141777_0609.cpp" />
+    <ClCompile Include="algo_12141777_0616.cpp" />
     <ClCompile Include="algo_1260_DFS_BFS.cpp" />
     <ClCompile Include="algo_12761_돌다리.cpp" />
     <ClCompile Include="algo_12865_평범한배낭.cpp" />
