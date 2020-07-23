@@ -147,6 +147,7 @@
     <ClCompile Include="algo_11404_플로이드.cpp" />
     <ClCompile Include="algo_1149_RGB거리.cpp" />
     <ClCompile Include="algo_11559_뿌요뿌요.cpp" />
+    <ClCompile Include="algo_11726_2n타일링.cpp" />
     <ClCompile Include="algo_12100_2048_.cpp" />
     <ClCompile Include="algo_12141444_0317.cpp" />
     <ClCompile Include="algo_12141777_0324.cpp" />
@@ -170,6 +171,7 @@
     <ClCompile Include="algo_14500_테트로미노.cpp" />
     <ClCompile Include="algo_14501_퇴사.cpp" />
     <ClCompile Include="algo_14502_연구소.cpp" />
+    <ClCompile Include="algo_1462_1로만들기_1.cpp" />
     <ClCompile Include="algo_1463_1로만들기.cpp" />
     <ClCompile Include="algo_14722_우유도시.cpp" />
     <ClCompile Include="algo_14888_연산자끼워넣기.cpp" />
