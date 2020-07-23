@@ -113,6 +113,8 @@
     <ClCompile Include="algo_skt_01.cpp" />
     <ClCompile Include="algo_skt_02.cpp" />
     <ClCompile Include="algo_ske_03.cpp" />
+    <ClCompile Include="algo_15654_n과m_5.cpp" />
+    <ClCompile Include="algo_15655_m과n_6.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="test.xml" />
