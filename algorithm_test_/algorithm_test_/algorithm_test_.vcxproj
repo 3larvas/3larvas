@@ -188,6 +188,10 @@
     <ClCompile Include="algo_15654_n과m_5.cpp" />
     <ClCompile Include="algo_15655_m과n_6.cpp" />
     <ClCompile Include="algo_15657_n과m_8.cpp" />
+    <ClCompile Include="algo_15663_n과m_9.cpp" />
+    <ClCompile Include="algo_15664_n과m_10.cpp" />
+    <ClCompile Include="algo_15665_n과m11.cpp" />
+    <ClCompile Include="algo_15666_n과m_12.cpp" />
     <ClCompile Include="algo_15683_감시.cpp" />
     <ClCompile Include="algo_15684_사다리조작_.cpp" />
     <ClCompile Include="algo_1600_말이되고싶은_원숭이.cpp" />

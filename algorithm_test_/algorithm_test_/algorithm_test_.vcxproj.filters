@@ -119,6 +119,10 @@
     <ClCompile Include="algo_1562_계단수.cpp" />
     <ClCompile Include="algo_16565_n과m_7.cpp" />
     <ClCompile Include="algo_15657_n과m_8.cpp" />
+    <ClCompile Include="algo_15663_n과m_9.cpp" />
+    <ClCompile Include="algo_15664_n과m_10.cpp" />
+    <ClCompile Include="algo_15665_n과m11.cpp" />
+    <ClCompile Include="algo_15666_n과m_12.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="test.xml" />
