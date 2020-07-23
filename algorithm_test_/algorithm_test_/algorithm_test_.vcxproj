@@ -167,6 +167,7 @@
     <ClCompile Include="algo_12865_평범한배낭.cpp" />
     <ClCompile Include="algo_13458_시험감독.cpp" />
     <ClCompile Include="algo_13460_구슬탈출2.cpp" />
+    <ClCompile Include="algo_1389_케빈베이컨의6단계법칙.cpp" />
     <ClCompile Include="algo_14499_주사위굴리기.cpp" />
     <ClCompile Include="algo_14500_테트로미노.cpp" />
     <ClCompile Include="algo_14501_퇴사.cpp" />
@@ -184,6 +185,8 @@
     <ClCompile Include="algo_15650_n과m_2.cpp" />
     <ClCompile Include="algo_15651_n과m_3.cpp" />
     <ClCompile Include="algo_15652_n과m_4.cpp" />
+    <ClCompile Include="algo_15654_n과m_5.cpp" />
+    <ClCompile Include="algo_15655_m과n_6.cpp" />
     <ClCompile Include="algo_15683_감시.cpp" />
     <ClCompile Include="algo_15684_사다리조작_.cpp" />
     <ClCompile Include="algo_1600_말이되고싶은_원숭이.cpp" />
@@ -202,6 +205,7 @@
     <ClCompile Include="algo_2468_안전영역.cpp" />
     <ClCompile Include="algo_2573_빙산.cpp" />
     <ClCompile Include="algo_2580_스도쿠.cpp" />
+    <ClCompile Include="algo_2583_영역구하기.cpp" />
     <ClCompile Include="algo_2606_바이러스.cpp" />
     <ClCompile Include="algo_2644_촌수계산.cpp" />
     <ClCompile Include="algo_2667_단지번호.cpp" />
@@ -212,6 +216,7 @@
     <ClCompile Include="algo_7562_나이트의 이동.cpp" />
     <ClCompile Include="algo_7568_덩치.cpp" />
     <ClCompile Include="algo_9095_123더하기.cpp" />
+    <ClCompile Include="algo_10844_쉬운계단수.cpp" />
     <ClCompile Include="algo_9205_맥주마시면서걸어가기.cpp" />
     <ClCompile Include="algo_9461_파도반수열.cpp" />
     <ClCompile Include="algo_9465_스티커.cpp" />
@@ -222,6 +227,9 @@
     <ClCompile Include="algo_hyffman_code.cpp" />
     <ClCompile Include="algo_intersect.cpp" />
     <ClCompile Include="algo_odd_even.cpp" />
+    <ClCompile Include="algo_ske_03.cpp" />
+    <ClCompile Include="algo_skt_01.cpp" />
+    <ClCompile Include="algo_skt_02.cpp" />
     <ClCompile Include="algo_sorting_ex.cpp" />
     <ClCompile Include="priorty_queue.cpp" />
     <ClCompile Include="sam_12100_2048.cpp" />

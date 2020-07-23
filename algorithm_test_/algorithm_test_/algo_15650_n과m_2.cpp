@@ -4,20 +4,19 @@
 //
 //int n, m;
 //int arr[10];
-//bool vis[10];
+//int vis[10];
 //
-//void DFS(int cnt) {
+//void DFS(int cnt, int pre_val) {
 //	if (cnt == m) {
-//		for (int i = 0; i < m; i++) printf("%d ", arr[i]);
+//		for (int i = 0; i < m; i++)printf("%d ", arr[i]);
 //		printf("\n");
 //		return;
 //	}
-//	for (int i = 1; i <= n; i++) {
+//	for (int i = pre_val+1; i <= n; i++) {
 //		if (!vis[i]) {
-//			if (cnt > 0 && arr[cnt - 1] > i) continue;
 //			arr[cnt] = i;
 //			vis[i] = true;
-//			DFS(cnt + 1);
+//			DFS(cnt + 1, i);
 //			vis[i] = false;
 //		}
 //	}
@@ -25,6 +24,6 @@
 //
 //int main() {
 //	scanf("%d %d", &n, &m);
-//	DFS(0);
+//	DFS(0, 0);
 //	return 0;
 //}

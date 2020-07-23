@@ -107,8 +107,14 @@
     <ClCompile Include="algo_12141777_0609.cpp" />
     <ClCompile Include="algo_12141777_0616.cpp" />
     <ClCompile Include="sam_5644_무선충전.cpp" />
-    <ClCompile Include="algo_1462_1로만들기_1.cpp" />
-    <ClCompile Include="algo_11726_2n타일링.cpp" />
+    <ClCompile Include="algo_10844_쉬운계단수.cpp" />
+    <ClCompile Include="algo_2583_영역구하기.cpp" />
+    <ClCompile Include="algo_1389_케빈베이컨의6단계법칙.cpp" />
+    <ClCompile Include="algo_skt_01.cpp" />
+    <ClCompile Include="algo_skt_02.cpp" />
+    <ClCompile Include="algo_ske_03.cpp" />
+    <ClCompile Include="algo_15654_n과m_5.cpp" />
+    <ClCompile Include="algo_15655_m과n_6.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="test.xml" />
