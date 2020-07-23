@@ -5,7 +5,7 @@
 //int n, m;
 //char arr[15];
 //
-//void DFS(int cnt) {
+//void dfs(int cnt) {
 //	if (cnt == m) {
 //		for (int i = 0; i < m; i++) printf("%d", arr[i]);
 //		printf("\n");
@@ -13,11 +13,11 @@
 //	}
 //	for (int i = 1; i <= n; i++) {
 //		arr[cnt] = i;
-//		DFS(cnt + 1);
+//		dfs(cnt + 1);
 //	}
 //}
 //int main() {
 //	scanf("%d %d", &n, &m);
-//	DFS(0);
+//	dfs(0);
 //	return 0;
 //}
