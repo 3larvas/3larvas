@@ -123,6 +123,11 @@
     <ClCompile Include="algo_15664_n과m_10.cpp" />
     <ClCompile Include="algo_15665_n과m11.cpp" />
     <ClCompile Include="algo_15666_n과m_12.cpp" />
+    <ClCompile Include="algo_1182_부분수열의합.cpp" />
+    <ClCompile Include="algo_2309_일곱난쟁이.cpp" />
+    <ClCompile Include="algo_7569_토마토.cpp" />
+    <ClCompile Include="algo_tmax_01.cpp" />
+    <ClCompile Include="algo_tmax_02.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="test.xml" />
