@@ -235,6 +235,7 @@
     <ClCompile Include="algo_heap_sorting.cpp" />
     <ClCompile Include="algo_hyffman_code.cpp" />
     <ClCompile Include="algo_intersect.cpp" />
+    <ClCompile Include="algo_kakao_2020_01.cpp" />
     <ClCompile Include="algo_odd_even.cpp" />
     <ClCompile Include="algo_ske_03.cpp" />
     <ClCompile Include="algo_skt_01.cpp" />
