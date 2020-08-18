@@ -193,6 +193,7 @@
     <ClCompile Include="algo_15664_n과m_10.cpp" />
     <ClCompile Include="algo_15665_n과m11.cpp" />
     <ClCompile Include="algo_15666_n과m_12.cpp" />
+    <ClCompile Include="algo_15671_오델로.cpp" />
     <ClCompile Include="algo_15683_감시.cpp" />
     <ClCompile Include="algo_15684_사다리조작_.cpp" />
     <ClCompile Include="algo_1600_말이되고싶은_원숭이.cpp" />
@@ -202,6 +203,7 @@
     <ClCompile Include="algo_1786_찾기.cpp" />
     <ClCompile Include="algo_1904_01타일.cpp" />
     <ClCompile Include="algo_1920_수찾기.cpp" />
+    <ClCompile Include="algo_20026_적록색약.cpp" />
     <ClCompile Include="algo_2098_tsp.cpp" />
     <ClCompile Include="algo_2098_외판원.cpp" />
     <ClCompile Include="algo_2112_보호필름.cpp" />
@@ -267,6 +269,7 @@
     <ClCompile Include="test_main.cpp" />
     <ClCompile Include="algo_14720_우유축제.cpp" />
     <ClCompile Include="algo_1562_계단수.cpp" />
+    <ClCompile Include="algp_17070_파이프옮기기.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="test.xml" />

@@ -129,6 +129,9 @@
     <ClCompile Include="algo_tmax_01.cpp" />
     <ClCompile Include="algo_tmax_02.cpp" />
     <ClCompile Include="algo_kakao_2020_01.cpp" />
+    <ClCompile Include="algo_15671_오델로.cpp" />
+    <ClCompile Include="algo_20026_적록색약.cpp" />
+    <ClCompile Include="algp_17070_파이프옮기기.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="test.xml" />
